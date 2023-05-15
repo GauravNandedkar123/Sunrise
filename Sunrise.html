@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<title> sunrise </title>
+<html>
+<head>
+  <title>Sunrise Animation</title>
+  <style>
+    /* CSS for sunrise animation */
+    .sun {
+      width: 100px;
+      height: 100px;
+      background-color: #ffca28;
+      border-radius: 50%;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-name: rise;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    
+    @keyframes rise {
+      0% {
+        top: 100%;
+      }
+      50% {
+        top: 10%;
+      }
+      100% {
+        top: 100%;
+      }
+    }
+    
+    /* Additional styles for the sky */
+    body {
+      background-color: #87ceeb;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .sky {
+      width: 100%;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .sunrise {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(#ffca28, #87ceeb);
+      position: absolute;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sky">
+    <div class="sunrise"></div>
+    <div class="sun"></div>
+  </div>
+</body>
+</html>
+
